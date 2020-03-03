@@ -16,64 +16,134 @@
   <link rel="stylesheet" href="lib/css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="lib/css/style.css">
+  <link rel="icon" type="image/png" href="lib/img/icono.png" />
 
 	<title></title>
 </head>
 <body>
-  <form method="POST" action="">
-      <div class="md-form form-lg">
-         <input type="email" class="form-control form-control-lg" name="correo" id="correo">
-         <label for="correo">Correo</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="password" class="form-control form-control-lg" name="pass" id="pass">
-         <label for="pass">Password</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="text" class="form-control form-control-lg" name="telefono" id="telefono" onkeypress="return soloNumeros(event);">
-         <label for="telefono">Telefono</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="text" class="form-control form-control-lg" name="domicilio" id="domicilio">
-         <label for="domicilio">Domicilio</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="text" class="form-control form-control-lg" name="colonia" id="colonia">
-         <label for="colonia">Colonia</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="text" class="form-control form-control-lg" name="ndomicilio" id="ndomicilio" onkeypress="return soloNumeros(event);">
-         <label for="foto">Num.Domicilio</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="text" class="form-control form-control-lg" name="rfc" id="rfc">
-         <label for="rfc">RFC</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="text" class="form-control form-control-lg" name="curp" id="curp">
-         <label for="curp">CURP</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="text" class="form-control form-control-lg" name="estado" id="estado">
-         <label for="estado">Estado</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="text" class="form-control form-control-lg" name="municipio" id="municipio">
-         <label for="Municipio">Municipio</label>
-      </div>
-      <div class="md-form form-lg">
-         <input type="date"  class="form-control form-control-lg" name="fecha" id="fecha">
-         <label for="fecha">Fecha de nacimiento</label>
-      </div>
-      <div class="md-form form-lg">
-      <select name="idioma" id="idioma">
-            <?php foreach ($idiomas as $a): ?>
-                <option value="<?php echo $a['id_idioma']?>"><?php echo $a['nombre']?></option>
-            <?php endforeach; ?>
-      </select> 
-      </div>             
-        <p><button type="submit" name="enviar" id="enviar">Registrar</button></p>
-  </form>
+  <div class="container">
+    <header id="navbar" >
+      <a href="" class="logo">LET S<span>TRAVEL</span></a>
+      <ul>
+      <li><a href="index.php">Inicio</a></li>
+      <li><a href="login.php">Login</a></li>
+    </ul>
+    <span class="menuIcon" onclick="menuToggle();"></span>
+    </header>
+
+    <div class="content">
+      <div class="card-body px-lg-5 pt-0">
+        <h2>REGISTRO</h2>
+        <form class="text-center" method="POST" action="">
+            <div class="row">
+              <div class="col">
+                <div class="md-form">
+                   <input class="form-control" type="email"  name="correo" id="correo">
+                   <label for="correo">Correo</label>
+                </div>      
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="md-form">
+               <input class="form-control" type="password" name="pass" id="pass">
+               <label for="pass">Password</label>
+                </div>      
+              </div>
+              <div class="col">
+              <div class="md-form">
+               <input class="form-control" type="text" name="telefono" id="telefono" onkeypress="return soloNumeros(event);">
+               <label for="telefono">Telefono</label>
+              </div>      
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="md-form">
+                 <input class="form-control" type="text"  name="domicilio" id="domicilio">
+                 <label for="domicilio">Calle</label>
+                </div>      
+              </div>
+              <div class="col">
+                <div class="md-form">
+                   <input class="form-control" type="text" name="colonia" id="colonia">
+                   <label for="colonia">Colonia</label>
+                </div>      
+              </div>
+              <div class="col">
+                <div class="md-form">
+                   <input class="form-control" type="text"  name="ndomicilio" id="ndomicilio" onkeypress="return soloNumeros(event);">
+                   <label for="foto">#</label>              
+                </div>      
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="md-form">
+               <input class="form-control" type="text"  name="rfc" id="rfc">
+               <label for="rfc">RFC</label>
+                </div>      
+              </div>
+              <div class="col">
+              <div class="md-form">
+               <input class="form-control" type="text" name="curp" id="curp">
+               <label for="curp">CURP</label>
+              </div>      
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="md-form">
+               <input class="form-control" type="text"name="estado" id="estado">
+               <label for="estado">Estado</label>
+                </div>      
+              </div>
+              <div class="col">
+              <div class="md-form">
+               <input class="form-control" type="text" name="municipio" id="municipio">
+               <label for="Municipio">Municipio</label>
+              </div>      
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="md-form">
+                  <input  class="form-control" type="date"   name="fecha" id="fecha">
+                  <label for="fecha">Fecha de nacimiento</label>
+                </div>      
+              </div>
+              <div class="col">
+              <div class="md-form">
+                <select class="custom-select custom-select-sm" name="idioma" id="idioma">
+                      <?php foreach ($idiomas as $a): ?>
+                          <option value="<?php echo $a['id_idioma']?>"><?php echo $a['nombre']?></option>
+                      <?php endforeach; ?>
+                </select> 
+              </div>      
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <button class="btn aqua-gradient" type="submit" name="enviar" id="enviar">Registrar</button>
+              </div>
+            </div>
+        </form> 
+      </div>    
+
+     <div class="bannerImg">
+      <img src="lib/img/img2.jpeg">
+     </div>     
+    </div>
+
+  </div>
+  
+
   <script type="text/javascript" src="lib/js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="lib/js/popper.min.js"></script>

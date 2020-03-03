@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="lib/css/bootstrap.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="lib/css/style.css">	
-  <title>´LET´S TRAVEL</title>
+   <link rel="icon" type="image/png" href="lib/img/icono.png">
+  <title>LET´S TRAVEL</title>
 </head>
 <body>
 
@@ -35,15 +36,15 @@
 		</div>
 
 		<div class="bannerImg" id="slideshow">
-			<img src="img/img1.jpg">
+			<img src="lib/img/img1.jpg">
 		</div>		
 	</div>
 
 		<div class="icons">
 			<ul class="scs">
-				<li><a href=""><img src="img/facebook.png"></a></li>
-				<li><a href=""><img src="img/gorjeo.png"></a></li>
-				<li><a href=""><img src="img/instagram.png"></a></li>
+				<li><a href=""><img src="lib/img/facebook.png"></a></li>
+				<li><a href=""><img src="lib/img/gorjeo.png"></a></li>
+				<li><a href=""><img src="lib/img/instagram.png"></a></li>
 			</ul>
 			
 
