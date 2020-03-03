@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="lib/css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="lib/css/style.css">
-  <link rel="icon" type="image/png" href="lib/img/icono.png" />
+  <link rel="icon" type="image/png" href="lib/img/icono.png">
 
 	<title></title>
 </head>
@@ -140,7 +140,7 @@
       <img src="lib/img/img2.jpeg">
      </div>     
     </div>
-
+    
   </div>
   
 
