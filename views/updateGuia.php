@@ -1,8 +1,7 @@
-<?php  
+<?php 
 include("../controllers/session.php");
 ?>
-<html>
-  <meta charset="utf-8">
+ <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Guia</title>
@@ -73,7 +72,7 @@ include("../controllers/session.php");
         <div class="dropdown-menu dropdown-menu-right dropdown-default"
           aria-labelledby="navbarDropdownMenuLink-333">
           <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="updateGuia.php">Configuraciones</a>
+          <a class="dropdown-item" href="updateGuia.php">Configuracion</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
@@ -84,7 +83,98 @@ include("../controllers/session.php");
 
 Bienvenido a guia
 <button type="button" class="btn btn-danger btn-rounded" onclick="location.href='../cerrarsession.php';">Cerrar session</button>
+   <form method="POST" action="../controllers/actualizar.php">
+<table>
+  <tr>
+  <td>
+    <div class="row">
+            <div class="col">
+               <div class="md-form">
+                <input class="form-control" type="password" name="pass" id="pass">
+               <label for="pass">Password</label>
+              </div>      
+            </div>
+      </div>
+  </td>
+  <td>
+ <button type="submit" class="btn aqua-gradient" name="actpass" id="actpass">Actualizar</button>  
+  </td>
+  <tr>  
+  <td>
+        <div class="row">
+              <div class="col">
+              <div class="md-form">
+               <input class="form-control" type="text" name="telefono" id="telefono" onkeypress="return soloNumeros(event);">
+              <label for="telefono">Telefono</label>
+            </div>      
+         </div>
+      </div>
+  </td>
+  <td>
+    <button class="btn aqua-gradient" type="submit" name="actphone" id="actphone">Actualizar</button>  
+  </td>  
+  <tr>
+  <td>
+        <div class="row">
+            <div class="col">
+                <div class="md-form">
+                 <input class="form-control" type="text"  name="domicilio" id="domicilio">
+                 <label for="domicilio">Calle</label>
+                </div>      
+              </div>
+            </div>
+  </td>
+<td>
+  <button class="btn aqua-gradient" type="submit" name="actdomi" id="actdomi">Actualizar</button> 
+</td>  
+</tr>
+  <td>
+    <div class="row">
+              <div class="col">
+                <div class="md-form">
+                   <input class="form-control" type="text" name="colonia" id="colonia">
+                   <label for="colonia">Colonia</label>
+                </div>      
+              </div>
+    </div>
+  </td>
+  <td>
+    <button class="btn aqua-gradient" type="submit" name="actcol" id="actcol">Actualizar</button>  
+  </td> 
+</tr>
+<tr>
+  <td>
+     <div class="row">
+        <div class="col">
+                <div class="md-form">
+                   <input class="form-control" type="text"  name="ndomicilio" id="ndomicilio" onkeypress="return soloNumeros(event);">
+                   <label for="foto">#</label>              
+                </div>      
+          </div>
+     </div>
+  <td>
+    <button class="btn aqua-gradient" type="submit" name="actndom" id="actndom">Actualizar</button>  
+  </td> 
+</tr>  
+<tr>
+  <td>
+       <div class="row">
+              <div class="col">
+              <div class="md-form">
+               <input class="form-control" type="text" name="municipio" id="municipio">
+               <label for="Municipio">Municipio</label>
+              </div>      
+              </div>
+            </div>
+   </td> 
+   <td>
+    <button class="btn aqua-gradient" type="submit" name="actmun" id="actmun" >Actualizar</button>  
+   </td> 
+</tr> 
+</table>
+                    
 
+</form>
 </body>
 
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
@@ -95,3 +185,4 @@ Bienvenido a guia
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="../lib/js/mdb.min.js"></script>
 </html>
+
