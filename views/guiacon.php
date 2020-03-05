@@ -67,22 +67,28 @@ include("../controllers/horario.php");
     <div class="content">
       <div class="card-body px-lg-5 pt-0">
         <h2>Horarios</h2>
-          <form  class="text-center" method="POST" action="../controllers/guardarhorario.php"> 
+          <form  class="text-center" method="POST" action="../controllers/guardardescripcion.php"> 
                 <div class="table-responsive">
                   <table class="table">
                     <tr>
+                      <th scope="col">CLAVE</th>
                       <th scope="col">DÍA</th>
                       <th scope="col">HORA DE INICIO</th>
                       <th scope="col">HORA DE FIN</th>
+                      <th scope="col">LUGARES A VISITAR</th>
                     </tr>
                        <?php foreach ($horario as $a): ?>
                         <tr>
+                          <td><input type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
                           <td><?php echo $a['dia']?></td>
                           <td><?php echo $a['horarioi']?></td>
                           <td><?php echo $a['horariof']?></td>
+                          <td><textarea name="array[]"></textarea></td>
+                          <td><textarea name="arraylugar[]"></textarea></td>
                         </tr>
                       <?php endforeach; ?>        
                   </table>
+                  <button type="submit" name="guardar" id="guardar">Guardar</button>
                 </div>  
           </form>
       </div>    
