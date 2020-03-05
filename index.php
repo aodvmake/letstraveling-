@@ -36,7 +36,7 @@
 		</div>
 
 		<div class="bannerImg" id="slideshow">
-			<img src="lib/img/img1.jpg">
+			<img src="lib/img/img1.jpeg">
 		</div>		
 	</div>
 

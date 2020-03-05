@@ -23,88 +23,77 @@ include("../controllers/horario.php");
 	<title></title>
 </head>
 <body>
-<!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
-    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Dropdown
-        </a>
-        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="guiahorario.php">Crear Guia</a>
-          <a class="dropdown-item" href="guiacon.php">Ver Horario</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item">
-        <a class="nav-link waves-effect waves-light">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-effect waves-light">
-          <i class="fab fa-google-plus-g"></i>
-        </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-default"
-          aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
+<div class="container">
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">LET´S TRAVEL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+        aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="guia.php">HOME<span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">HORARIOS
+            </a>
+            <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+              <a class="dropdown-item" href="guiahorario.php">CREAR HORARIOS</a>
+              <a class="dropdown-item" href="guiacon.php">VER HORARIOS</a>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light">
+              <i class="fas fa-times" aria-hidden="true" onclick="location.href='../cerrarsession.php';"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--/.Navbar -->
+
+    <div class="content">
+      <div class="card-body px-lg-5 pt-0">
+        <h2>Horarios</h2>
+          <form  class="text-center" method="POST" action="../controllers/guardarhorario.php"> 
+                <div class="table-responsive">
+                  <table class="table">
+                    <tr>
+                      <th scope="col">DÍA</th>
+                      <th scope="col">HORA DE INICIO</th>
+                      <th scope="col">HORA DE FIN</th>
+                    </tr>
+                       <?php foreach ($horario as $a): ?>
+                        <tr>
+                          <td><?php echo $a['dia']?></td>
+                          <td><?php echo $a['horarioi']?></td>
+                          <td><?php echo $a['horariof']?></td>
+                        </tr>
+                      <?php endforeach; ?>        
+                  </table>
+                </div>  
+          </form>
+      </div>    
+
+     <div class="bannerImg">
+      <img src="../lib/img/img2.jpeg">
+     </div>
+    </div>
+
   </div>
-</nav>
-<!--/.Navbar -->
-Bienvenido a guia
-<button type="button" class="btn btn-danger btn-rounded" onclick="location.href='../cerrarsession.php';">Cerrar session</button>
-<br>
-
-<form method="POST" action="../controllers/guardarhorario.php"> 
-
-      <div class="md-form form-lg">
-        <table>
-          <tr>
-            <td>Dia</td>
-            <td>Hora de inicio</td>
-            <td>Hora final</td>
-          </tr>
-             <?php foreach ($horario as $a): ?>
-              <tr>
-                <td><?php echo $a['dia']?></td>
-                <td><?php echo $a['horarioi']?></td>
-                <td><?php echo $a['horariof']?></td>
-              </tr>
-            <?php endforeach; ?>        
-        </table>
-      </div>  
-
-</form>
+  
 </body>
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
