@@ -66,23 +66,54 @@ include("../controllers/horarioparaturista.php");
  Agregar horario
  <form  class="text-center" method="POST"> 
                 <div class="table-responsive">
-                  <table class="table">
-                    <tr>
-                      <th scope="col">DÍA</th>
-                      <th scope="col">HORA DE INICIO</th>
-                      <th scope="col">HORA DE FIN</th>
                     </tr>
-                       <?php foreach ($horario as $a): ?>
-                        <tr>
-                          <td><?php echo $a['dia']?></td>
-                          <td><?php echo $a['horarioi']?></td>
-                          <td><?php echo $a['horariof']?></td>
-                        </tr>
-                      <?php endforeach; ?>        
-                  </table>
+                       <?php
+
+                       /* foreach ($horario as $a):
+                        ?>
+                        
+                        <?php 
+                         foreach ($horario2 as $ho2):
+                           if($a['id_usuario']=$ho2['id_usuario']):
+                             ?>
+                         <div>
+                         <table class="table">
+                         <tr>
+                          <td><?php echo $ho2['horarioi']?></td>
+                          <td><?php echo $ho2['id_usuario']?></td>
+                          <td><?php echo $ho2['dia']?></td>
+                          <td><?php echo $ho2['horarioi']?></td>
+                          <td><?php echo $ho2['horariof']?></td>  
+                          </tr>
+                          </table> 
+                      </div>
+                      <?php endif;
+                       endforeach;
+                      ?> <?php   
+                      endforeach;
+                       */ ?>
+                       <?php 
+                      
+                        foreach ($horario as $a):?>
+                        <table>
+                          <tr>
+                            <th>Empleado</th>
+                            <th>Dias</th>
+                            <th>Lugar</th>
+                          </tr>  
+                          <tr>
+                           <td><?php echo $a['id_usuario']?></td>
+                           <td><?php echo $a['dias']?></td>
+                           <td><?php echo $a['lugares']?></td>
+                          </tr>
+                        </table>
+                        <br>
+                        <br>
+                        <?php
+                         endforeach;
+                        ?>
                 </div>  
           </form>
-
 </body>
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->

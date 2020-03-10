@@ -80,7 +80,7 @@ include("../controllers/horario.php");
                        <?php foreach ($horario as $a): ?>
                         <tr>
                           <td><input type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
-                          <td><?php echo $a['dia']?></td>
+                          <td><input type="" name="dia[]" readonly value="<?php echo $a['dia']?>"></td>
                           <td><?php echo $a['horarioi']?></td>
                           <td><?php echo $a['horariof']?></td>
                           <td><textarea name="array[]"></textarea></td>
