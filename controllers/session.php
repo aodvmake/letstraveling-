@@ -1,6 +1,11 @@
 <?php 
 session_start();
 if ($_SESSION['email']){
+ if ($_SESSION['tipo']=="Guia"){
+   }
+   else{
+   eliminarsession();
+   }
   }
  else{
     eliminarsession();
