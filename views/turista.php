@@ -67,33 +67,7 @@ include("../controllers/horarioparaturista.php");
  <form  class="text-center" method="POST"> 
                 <div class="table-responsive">
                     </tr>
-                       <?php
-
-                       /* foreach ($horario as $a):
-                        ?>
-                        
-                        <?php 
-                         foreach ($horario2 as $ho2):
-                           if($a['id_usuario']=$ho2['id_usuario']):
-                             ?>
-                         <div>
-                         <table class="table">
-                         <tr>
-                          <td><?php echo $ho2['horarioi']?></td>
-                          <td><?php echo $ho2['id_usuario']?></td>
-                          <td><?php echo $ho2['dia']?></td>
-                          <td><?php echo $ho2['horarioi']?></td>
-                          <td><?php echo $ho2['horariof']?></td>  
-                          </tr>
-                          </table> 
-                      </div>
-                      <?php endif;
-                       endforeach;
-                      ?> <?php   
-                      endforeach;
-                       */ ?>
                        <?php 
-                      
                         foreach ($horario as $a):?>
                         <table>
                           <tr>
@@ -105,6 +79,8 @@ include("../controllers/horarioparaturista.php");
                            <td><?php echo $a['id_usuario']?></td>
                            <td><?php echo $a['dias']?></td>
                            <td><?php echo $a['lugares']?></td>
+                           <td>  <!-- Button to Open the Modal -->
+                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="empleado">Ver Mas</button></td>
                           </tr>
                         </table>
                         <br>
@@ -113,6 +89,32 @@ include("../controllers/horarioparaturista.php");
                          endforeach;
                         ?>
                 </div>  
+
+<!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
           </form>
 </body>
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
