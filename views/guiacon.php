@@ -90,6 +90,9 @@ include("../controllers/horario.php");
                         <tr>
                           <td><input class="form-control form-control-sm" type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
                           <td><?php echo $a['dia']?></td>
+                          <td><input type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
+                          <td><input type="" name="dia[]" readonly value="<?php echo $a['dia']?>"></td>
+
                           <td><?php echo $a['horarioi']?></td>
                           <td><?php echo $a['horariof']?></td>
                           <td><textarea name="array[]"></textarea></td>

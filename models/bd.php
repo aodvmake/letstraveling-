@@ -4,7 +4,6 @@ abstract class con{
 	private $user;
 	private $pass;
 	private $bd;
-
 	abstract public function cnx();
 }
 class conexion extends con{
@@ -23,6 +22,4 @@ class callTo{
 		return $obj->cnx();
 	}
 }
-
-
  ?>

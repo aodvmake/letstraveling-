@@ -4,7 +4,7 @@ class modeloconsulta{
        function consul(){
        $conht = new callTo();
        $cnx = $conht->callmeBaby();
-       $cons=mysqli_query($cnx,"SELECT* FROM horarios");
+       $cons=mysqli_query($cnx,"SELECT* FROM vistahorario");
        $retorno=[];
        $i=0;
        while ($fila=$cons->fetch_array()){
