@@ -49,16 +49,23 @@ include("../controllers/session.php");
               aria-haspopup="true" aria-expanded="false">HORARIOS
             </a>
             <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-              <a class="dropdown-item" href="guiahorario.php">CREAR HORARIOS</a>
+              <a class="dropdown-item" href="guiahorario.php">CREAR HORARIO</a>
               <a class="dropdown-item" href="guiacon.php">VER HORARIOS</a>
             </div>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
-          <li class="nav-item">
-            <a class="nav-link waves-effect waves-light">
-              <i class="fas fa-times" aria-hidden="true" onclick="location.href='../cerrarsession.php';"></i>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i>
             </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-default"
+              aria-labelledby="navbarDropdownMenuLink-333">
+              <a class="dropdown-item" href="updateGuia.php">CONFIGURACIÓN</a>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#" onclick="location.href='../cerrarsession.php';">SALIR</a>
+            </div>
           </li>
         </ul>
       </div>

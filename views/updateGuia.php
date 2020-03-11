@@ -74,102 +74,103 @@ include("../controllers/session.php");
         <div class="card-body px-lg-5 pt-0">
             <h2>ACTUALIZAR MI INFORMACIÓN</h2>
              <form method="POST" action="../controllers/actualizar.php">
-              <table>
+
+              <table  class="table table-borderless">
                 <tr>
                 <td>
                   <div class="row">
-                          <div class="col">
-                             <div class="md-form">
-                              <input class="form-control" type="password" name="pass" id="pass">
-                             <label for="pass">Password</label>
-                            </div>      
-                          </div>
+                    <div class="col">
+                      <div class="md-form">
+                        <input class="form-control" type="password" name="pass" id="pass">
+                        <label for="pass">Password</label>
+                      </div>      
                     </div>
+                  </div>
                 </td>
                 <td>
-               <button type="submit" class="btn aqua-gradient" name="actpass" id="actpass">Actualizar</button>  
+                <button type="submit" class="btn aqua-gradient px-3" name="actpass" id="actpass"><i class="fas fa-sync-alt" aria-hidden="true"></i></button> 
                 </td>
                 <tr>  
                 <td>
-                      <div class="row">
-                            <div class="col">
-                            <div class="md-form">
-                             <input class="form-control" type="text" name="telefono" id="telefono" onkeypress="return soloNumeros(event);">
-                            <label for="telefono">Telefono</label>
-                          </div>      
-                       </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="md-form">
+                        <input class="form-control" type="text" name="telefono" id="telefono" onkeypress="return soloNumeros(event);">
+                        <label for="telefono">Telefono</label>
+                      </div>      
                     </div>
+                  </div>
                 </td>
                 <td>
-                  <button class="btn aqua-gradient" type="submit" name="actphone" id="actphone">Actualizar</button>  
+                <button type="submit" class="btn aqua-gradient px-3" name="actphone" id="actphone"><i class="fas fa-sync-alt" aria-hidden="true"></i></button> 
                 </td>  
                 <tr>
                 <td>
-                      <div class="row">
-                          <div class="col">
-                              <div class="md-form">
-                               <input class="form-control" type="text"  name="domicilio" id="domicilio">
-                               <label for="domicilio">Calle</label>
-                              </div>      
-                            </div>
-                          </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="md-form">
+                        <input class="form-control" type="text"  name="domicilio" id="domicilio">
+                        <label for="domicilio">Calle</label>
+                      </div>      
+                    </div>
+                  </div>
                 </td>
               <td>
-                <button class="btn aqua-gradient" type="submit" name="actdomi" id="actdomi">Actualizar</button> 
+                <button type="submit" class="btn aqua-gradient px-3" name="actdomi" id="actdomi"><i class="fas fa-sync-alt" aria-hidden="true"></i></button>
               </td>  
               </tr>
                 <td>
                   <div class="row">
-                            <div class="col">
-                              <div class="md-form">
-                                 <input class="form-control" type="text" name="colonia" id="colonia">
-                                 <label for="colonia">Colonia</label>
-                              </div>      
-                            </div>
+                    <div class="col">
+                      <div class="md-form">
+                        <input class="form-control" type="text" name="colonia" id="colonia">
+                        <label for="colonia">Colonia</label>
+                      </div>      
+                    </div>
                   </div>
                 </td>
                 <td>
-                  <button class="btn aqua-gradient" type="submit" name="actcol" id="actcol">Actualizar</button>  
+                <button type="submit" class="btn aqua-gradient px-3" name="actcol" id="actcol"><i class="fas fa-sync-alt" aria-hidden="true"></i></button>
                 </td> 
               </tr>
               <tr>
                 <td>
-                   <div class="row">
-                      <div class="col">
-                              <div class="md-form">
-                                 <input class="form-control" type="text"  name="ndomicilio" id="ndomicilio" onkeypress="return soloNumeros(event);">
-                                 <label for="foto">#</label>              
-                              </div>      
-                        </div>
-                   </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="md-form">
+                        <input class="form-control" type="text"  name="ndomicilio" id="ndomicilio" onkeypress="return soloNumeros(event);">
+                        <label for="foto">#</label>              
+                      </div>      
+                    </div>
+                  </div>
                 <td>
-                  <button class="btn aqua-gradient" type="submit" name="actndom" id="actndom">Actualizar</button>  
+                  <button class="btn aqua-gradient px-3" type="submit" name="actndom" id="actndom"><i class="fas fa-sync-alt" aria-hidden="true"></i></button>  
                 </td> 
               </tr>  
               <tr>
                 <td>
-                     <div class="row">
-                            <div class="col">
-                            <div class="md-form">
-                             <input class="form-control" type="text" name="municipio" id="municipio">
-                             <label for="Municipio">Municipio</label>
-                            </div>      
-                            </div>
-                          </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="md-form">
+                        <input class="form-control" type="text" name="municipio" id="municipio">
+                        <label for="Municipio">Municipio</label>
+                      </div>      
+                    </div>
+                  </div>
                  </td> 
                  <td>
-                  <button class="btn aqua-gradient" type="submit" name="actmun" id="actmun" >Actualizar</button>  
+                  <button class="btn aqua-gradient px-3" type="submit" name="actmun" id="actmun" ><i class="fas fa-sync-alt" aria-hidden="true"></i></button>  
                  </td> 
               </tr> 
               </table>
           </form>
         </div>
+
+         <div class="bannerImg">
+          <img src="../lib/img/img2.jpeg">
+         </div>
       </div>
-
   </div>
-    
-
-
 </body>
 
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>

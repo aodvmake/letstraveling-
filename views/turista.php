@@ -63,10 +63,12 @@ include("../controllers/horarioparaturista.php");
       </div>
     </nav>
     <!--/.Navbar -->
+
+ 
  Agregar horario
  <form  class="text-center" method="POST"> 
-                <div class="table-responsive">
-                  <table class="table">
+   <div class="table-responsive">
+       <table class="table">
                     <tr>
                       <th scope="col">DÍA</th>
                       <th scope="col">HORA DE INICIO</th>
@@ -79,9 +81,9 @@ include("../controllers/horarioparaturista.php");
                           <td><?php echo $a['horariof']?></td>
                         </tr>
                       <?php endforeach; ?>        
-                  </table>
-                </div>  
-          </form>
+       </table>
+   </div>  
+</form>
 
 </body>
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
