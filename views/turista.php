@@ -85,7 +85,9 @@ include("../controllers/horarioparaturista.php");
              </tr>
               <?php foreach ($horario as $a): ?>
                 <tr>
-
+                  <td><?php echo $a['dia']?></td>
+                  <td><?php echo $a['horarioi']?></td>
+                  <td><?php echo $a['horariof']?></td>
                 </tr>
               <?php endforeach; ?>        
            </table>
