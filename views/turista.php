@@ -71,6 +71,7 @@ include("../controllers/horarioparaturista.php");
     </nav>
     <!--/.Navbar -->
 
+<<<<<<< HEAD
 <div class="content">
   <div class="card-body px-lg-1 pt-0">
    <h2>AGREGAR HORARIO</h2> 
@@ -84,10 +85,7 @@ include("../controllers/horarioparaturista.php");
              </tr>
               <?php foreach ($horario as $a): ?>
                 <tr>
-                 <!-- 
-                  <td><?php echo $a['dia']?></td>
-                  <td><?php echo $a['horarioi']?></td>
-                  <td><?php echo $a['horariof']?></td>-->
+
                 </tr>
               <?php endforeach; ?>        
            </table>
@@ -99,6 +97,11 @@ include("../controllers/horarioparaturista.php");
 
 </div>
 
+=======
+ 
+ Agregar horario
+ <form  class="text-center" method="POST"> 
+>>>>>>> 6275af954d052bdcba56cf42a0f2069839d1c081
 
 
                 <div class="table-responsive">
@@ -116,7 +119,7 @@ include("../controllers/horarioparaturista.php");
                            <td><?php echo $a['dias']?></td>
                            <td><?php echo $a['lugares']?></td>
                            <td>  <!-- Button to Open the Modal -->
-                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="empleado">Ver Mas</button></td>
+                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="empleado" value="<?php echo $a['id_usuario']?>">Ver Mas</button></td>
                           </tr>
                         </table>
                         <br>
@@ -125,7 +128,10 @@ include("../controllers/horarioparaturista.php");
                          endforeach;
                         ?>
                 </div>  
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6275af954d052bdcba56cf42a0f2069839d1c081
 
 <!-- The Modal -->
   <div class="modal fade" id="myModal">
@@ -164,4 +170,5 @@ include("../controllers/horarioparaturista.php");
   <script type="text/javascript">
     $('#materialIndeterminate2').prop('indeterminate', true);
   </script>
+  <script type="text/javascript" src="../js/modal.js"></script>
 </html>
