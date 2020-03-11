@@ -76,9 +76,9 @@ include("../controllers/horario.php");
       <div class="card-body px-lg-1 pt-0">
         <h2>Horarios</h2>
           <form  class="text-center" method="POST" action="../controllers/guardardescripcion.php"> 
-                <div class="table-responsive">
+                <div class="table-responsive" >
                   <table class="table">
-                    <tr>
+                    <tr class="text-center">
                       <th scope="col">CLAVE</th>
                       <th scope="col">DÍA</th>
                       <th scope="col">HORA DE INICIO</th>
@@ -88,15 +88,12 @@ include("../controllers/horario.php");
                     </tr>
                        <?php foreach ($horario as $a): ?>
                         <tr>
-                          <td><input class="form-control form-control-sm" type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
+                          <td><input class="form-control form-control-sm text-center" type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
                           <td><?php echo $a['dia']?></td>
-                          <td><input type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
-                          <td><input type="" name="dia[]" readonly value="<?php echo $a['dia']?>"></td>
-
                           <td><?php echo $a['horarioi']?></td>
                           <td><?php echo $a['horariof']?></td>
-                          <td><textarea name="array[]"></textarea></td>
-                          <td><textarea name="arraylugar[]"></textarea></td>
+                          <td><textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="2" name="array[]"></textarea></td>
+                          <td><textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="2" name="arraylugar[]"></textarea></td>
                         </tr>
                       <?php endforeach; ?>        
                   </table>
