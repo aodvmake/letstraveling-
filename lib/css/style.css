@@ -277,6 +277,10 @@ header ul li a.active:before{
  width: 100%;
 }
 
+.sinborde {
+border: 0;
+}
+
 .menuIcon{
 	display: initial;
 	position: fixed;

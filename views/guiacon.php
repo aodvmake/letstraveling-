@@ -19,7 +19,7 @@ include("../controllers/horario.php");
   <link rel="stylesheet" href="../lib/css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="../lib/css/style.css">
-    <link rel="icon" type="image/png" href="../lib/img/icono.png">
+  <link rel="icon" type="image/png" href="../lib/img/icono.png">
 <head>
 	<title></title>
 </head>
@@ -74,7 +74,7 @@ include("../controllers/horario.php");
 
     <div class="content">
       <div class="card-body px-lg-1 pt-0">
-        <h2>Horarios</h2>
+        <h2>Descripción de visita</h2>
           <form  class="text-center" method="POST" action="../controllers/guardardescripcion.php"> 
                 <div class="table-responsive" >
                   <table class="table">
@@ -88,7 +88,8 @@ include("../controllers/horario.php");
                     </tr>
                        <?php foreach ($horario as $a): ?>
                         <tr>
-                          <td><input class="form-control form-control-sm text-center" type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
+
+                          <td><?php echo $a['id_horario']?></td>
                           <td><?php echo $a['dia']?></td>
                           <td><?php echo $a['horarioi']?></td>
                           <td><?php echo $a['horariof']?></td>
