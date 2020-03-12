@@ -80,11 +80,10 @@ include("../controllers/horarioparaturista.php");
                             <th>Lugar</th>
                           </tr>  
                           <tr>
-                           <td><?php echo $a['id_usuario']?></td>
+                           <td><input type="" name="empler" id="empler" e value="<?php echo $a['id_usuario']?>"></td>
                            <td><?php echo $a['dias']?></td>
                            <td><?php echo $a['lugares']?></td>
-                           <td>  <!-- Button to Open the Modal -->
-                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="empleado" value="<?php echo $a['id_usuario']?>">Ver Mas</button></td>
+                           <td>  <!-- Button to Open the Modal -->                                        <button type="button" class="btn btn-primary" onclick="square('<?php echo $a['id_usuario']?>')" id="empleado">Ver Mas</button></td> 
                           </tr>
                         </table>
                         <br>
@@ -108,6 +107,7 @@ include("../controllers/horarioparaturista.php");
         <!-- Modal body -->
         <div class="modal-body">
           Modal body..
+          <div id="resultado"></div>
         </div>
         
         <!-- Modal footer -->
@@ -131,5 +131,28 @@ include("../controllers/horarioparaturista.php");
   <script type="text/javascript">
     $('#materialIndeterminate2').prop('indeterminate', true);
   </script>
-  <script type="text/javascript" src="../js/modal.js"></script>
+
+
+<script type="text/javascript">
+function square(id) {
+  $('#idHide').val(id);
+  $('#myModal').modal('show')
+        var parametros = {
+        'id':id,
+        'request':'data',
+        };
+        
+      $.ajax({
+        data: parametros,
+        url:'../controllers/modal.php',
+        type:'POST',
+        beforeSend: function () {
+            },
+        success:  function (response) {
+          document.getElementById('resultado').innerHTML = response;
+          $("#idempleado").val("")
+        }
+        });
+ }
+</script>
 </html>

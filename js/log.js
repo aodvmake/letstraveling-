@@ -25,6 +25,7 @@ $(document).ready(function(){
 						case 'Turista':
 						window.location.href="views/turista.php"
 						break;
+
 						case 'Administrador':
 						window.location.href="views/admin.php"
 						break;
