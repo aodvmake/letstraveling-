@@ -16,13 +16,13 @@ class modeloguardar{
           }
        
          switch ($rows) {
-         	case 'Guia': echo "Guia";
+         	  case 'Guia': echo "Guia";
          		break;
             case 'Turista': echo "Turista";
          		break;
-         	case 'Administrador': echo "Administrador";
-				break;
-			case 'King': echo "King";
+         	  case 'Administrador': echo "Administrador";
+				    break;
+			      case 'King': echo "King";
 				break;
          }
       }

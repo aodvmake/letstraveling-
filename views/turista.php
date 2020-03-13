@@ -19,8 +19,9 @@ include("../controllers/horarioparaturista.php");
   <link rel="stylesheet" href="../lib/css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="../lib/css/style.css">
+  <link rel="icon" type="image/png" href="../lib/img/icono.png">
 <head>
-  <title></title>
+  <title>LET´S TRAVEL</title>
 </head>
 <body>
 <div class="container">
@@ -48,44 +49,63 @@ include("../controllers/horarioparaturista.php");
               aria-haspopup="true" aria-expanded="false">HORARIOS
             </a>
             <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-              <a class="dropdown-item" href="guiahorario.php">CREAR HORARIOS</a>
+              <a class="dropdown-item" href="guiahorario.php">CREAR HORARIO</a>
               <a class="dropdown-item" href="guiacon.php">VER HORARIOS</a>
             </div>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
-          <li class="nav-item">
-            <a class="nav-link waves-effect waves-light">
-              <i class="fas fa-times" aria-hidden="true" onclick="location.href='../cerrarsession.php';"></i>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i>
             </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-default"
+              aria-labelledby="navbarDropdownMenuLink-333">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#" onclick="location.href='../cerrarsession.php';">SALIR</a>
+            </div>
           </li>
         </ul>
       </div>
     </nav>
     <!--/.Navbar -->
 
+<<<<<<< HEAD
+<div class="content">
+  <div class="card-body px-lg-1 pt-0">
+   <h2>AGREGAR HORARIO</h2> 
+     <form  class="text-center" method="POST"> 
+       <div class="table-responsive">
+           <table class="table">
+             <tr>
+              <th scope="col">DÍA</th>
+              <th scope="col">HORA DE INICIO</th>
+              <th scope="col">HORA DE FIN</th>
+             </tr>
+              <?php foreach ($horario as $a): ?>
+                <tr>
+                  <td><?php echo $a['dia']?></td>
+                  <td><?php echo $a['horarioi']?></td>
+                  <td><?php echo $a['horariof']?></td>
+                </tr>
+              <?php endforeach; ?>        
+           </table>
+       </div>  
+    </form>
+  </div> 
+
+
+
+</div>
+
+=======
  
  Agregar horario
  <form  class="text-center" method="POST"> 
-<<<<<<< HEAD
-   <div class="table-responsive">
-       <table class="table">
-                    <tr>
-                      <th scope="col">DÍA</th>
-                      <th scope="col">HORA DE INICIO</th>
-                      <th scope="col">HORA DE FIN</th>
-                    </tr>
-                       <?php foreach ($horario as $a): ?>
-                        <tr>
-                          <td><?php echo $a['dia']?></td>
-                          <td><?php echo $a['horarioi']?></td>
-                          <td><?php echo $a['horariof']?></td>
-                        </tr>
-                      <?php endforeach; ?>        
-       </table>
-   </div>  
-</form>
-=======
+>>>>>>> 6275af954d052bdcba56cf42a0f2069839d1c081
+
+
                 <div class="table-responsive">
                     </tr>
                        <?php 
@@ -97,11 +117,10 @@ include("../controllers/horarioparaturista.php");
                             <th>Lugar</th>
                           </tr>  
                           <tr>
-                           <td><?php echo $a['id_usuario']?></td>
+                           <td><input type="" name="empler" id="empler" e value="<?php echo $a['id_usuario']?>"></td>
                            <td><?php echo $a['dias']?></td>
                            <td><?php echo $a['lugares']?></td>
-                           <td>  <!-- Button to Open the Modal -->
-                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="empleado">Ver Mas</button></td>
+                           <td>  <!-- Button to Open the Modal -->                                        <button type="button" class="btn btn-primary" onclick="square('<?php echo $a['id_usuario']?>')" id="empleado">Ver Mas</button></td> 
                           </tr>
                         </table>
                         <br>
@@ -110,7 +129,10 @@ include("../controllers/horarioparaturista.php");
                          endforeach;
                         ?>
                 </div>  
->>>>>>> 08546a2c08ad59f5a09d173ba4932b38de87e5e2
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6275af954d052bdcba56cf42a0f2069839d1c081
 
 <!-- The Modal -->
   <div class="modal fade" id="myModal">
@@ -126,6 +148,7 @@ include("../controllers/horarioparaturista.php");
         <!-- Modal body -->
         <div class="modal-body">
           Modal body..
+          <div id="resultado"></div>
         </div>
         
         <!-- Modal footer -->
@@ -149,4 +172,28 @@ include("../controllers/horarioparaturista.php");
   <script type="text/javascript">
     $('#materialIndeterminate2').prop('indeterminate', true);
   </script>
+
+
+<script type="text/javascript">
+function square(id) {
+  $('#idHide').val(id);
+  $('#myModal').modal('show')
+        var parametros = {
+        'id':id,
+        'request':'data',
+        };
+        
+      $.ajax({
+        data: parametros,
+        url:'../controllers/modal.php',
+        type:'POST',
+        beforeSend: function () {
+            },
+        success:  function (response) {
+          document.getElementById('resultado').innerHTML = response;
+          $("#idempleado").val("")
+        }
+        });
+ }
+</script>
 </html>
