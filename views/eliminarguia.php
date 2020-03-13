@@ -1,9 +1,8 @@
 <?php 
 
-include("../controllers/sesionadm.php");
+include("../controllers/guiacontrol.php");
  ?>
-
-<html>
+ <html>
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -79,8 +78,42 @@ include("../controllers/sesionadm.php");
           <img src="../lib/img/img5.jpeg">
         </div>    
   </div>
+
   </div>
+<form methodo="POST" action="../controllers/controlguiaeliminar.php">
+
+<table width="70%" border="1px" align="left">
+  <tr>
+                      <th> Estatus </th>
+</tr>
+<?php 
+
+foreach ($variable as $ap ):
+ ?>
+
+                       <tr>
+                         <td> <?php echo $ap['estatus']?> </td>
+                          <td> <?php echo $ap['email']?> </td>
+                          <td> <?php echo $ap['id_puesto']?> </td>
+                          <td> <?php echo $ap['id_usuario']?> </td>
+
+                          <td> <input type="checkbox" value="<?php echo $ap['id_usuario']?>" id="check" name="check"> </imput> </td>
+
+
+
+                        </tr>
+
+<?php 
+endforeach;
+
+ ?>
+</table>
+
+                         
+                         <button type="submit" id="guardar" name="guardar"> Eliminar </button>
+</form>
 </body>
+
 
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->

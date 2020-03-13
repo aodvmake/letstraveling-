@@ -87,6 +87,7 @@ include("../controllers/horario.php");
                       <th scope="col">DESCRIPCIÓN</th>
                     </tr>
                        <?php foreach ($horario as $a): ?>
+
                         <tr>
                           <td><input class="form-control form-control-sm" type="" name="id[]" readonly value="<?php echo $a['id_horario']?>"></td>
                           <td><?php echo $a['dia']?></td>
