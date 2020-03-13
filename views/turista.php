@@ -19,9 +19,8 @@ include("../controllers/horarioparaturista.php");
   <link rel="stylesheet" href="../lib/css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="../lib/css/style.css">
-  <link rel="icon" type="image/png" href="../lib/img/icono.png">
 <head>
-  <title>LET´S TRAVEL</title>
+  <title></title>
 </head>
 <body>
 <div class="container">
@@ -49,61 +48,25 @@ include("../controllers/horarioparaturista.php");
               aria-haspopup="true" aria-expanded="false">HORARIOS
             </a>
             <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-              <a class="dropdown-item" href="guiahorario.php">CREAR HORARIO</a>
+              <a class="dropdown-item" href="guiahorario.php">CREAR HORARIOS</a>
               <a class="dropdown-item" href="guiacon.php">VER HORARIOS</a>
             </div>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i>
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light">
+              <i class="fas fa-times" aria-hidden="true" onclick="location.href='../cerrarsession.php';"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-default"
-              aria-labelledby="navbarDropdownMenuLink-333">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#" onclick="location.href='../cerrarsession.php';">SALIR</a>
-            </div>
           </li>
         </ul>
       </div>
     </nav>
     <!--/.Navbar -->
 
-<<<<<<< HEAD
-<div class="content">
-  <div class="card-body px-lg-1 pt-0">
-   <h2>AGREGAR HORARIO</h2> 
-     <form  class="text-center" method="POST"> 
-       <div class="table-responsive">
-           <table class="table">
-             <tr>
-              <th scope="col">DÍA</th>
-              <th scope="col">HORA DE INICIO</th>
-              <th scope="col">HORA DE FIN</th>
-             </tr>
-              <?php foreach ($horario as $a): ?>
-                <tr>
-                  <td><?php echo $a['dia']?></td>
-                  <td><?php echo $a['horarioi']?></td>
-                  <td><?php echo $a['horariof']?></td>
-                </tr>
-              <?php endforeach; ?>        
-           </table>
-       </div>  
-    </form>
-  </div> 
-
-
-
-</div>
-
-=======
  
  Agregar horario
  <form  class="text-center" method="POST"> 
->>>>>>> 6275af954d052bdcba56cf42a0f2069839d1c081
 
 
                 <div class="table-responsive">
@@ -129,10 +92,6 @@ include("../controllers/horarioparaturista.php");
                          endforeach;
                         ?>
                 </div>  
-<<<<<<< HEAD
-
-=======
->>>>>>> 6275af954d052bdcba56cf42a0f2069839d1c081
 
 <!-- The Modal -->
   <div class="modal fade" id="myModal">
@@ -145,12 +104,12 @@ include("../controllers/horarioparaturista.php");
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
-        <!-- Modal body -->
+        <span id="rateMe2"  class="empty-stars"></span>
         <div class="modal-body">
           Modal body..
           <div id="resultado"></div>
         </div>
-        
+        <table><tr><td><input type='text' name='addcoment' id='addcoment'></td><td><button type='button' id='enviacomen' class='btn btn-primary'>Enviar</button></td></tr></table>
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -169,6 +128,9 @@ include("../controllers/horarioparaturista.php");
   <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="../lib/js/mdb.min.js"></script>
+  <script type="text/javascript" src="../js/comentarios.js"></script>
+  <script type="text/javascript" src="../lib/js/addons/rating.min.js"></script>
+  <script type="text/javascript" src="../js/estrellas.js"></script>
   <script type="text/javascript">
     $('#materialIndeterminate2').prop('indeterminate', true);
   </script>
