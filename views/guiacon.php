@@ -87,6 +87,7 @@ include("../controllers/horario.php");
                       <th scope="col">DESCRIPCIÓN</th>
                     </tr>
                        <?php foreach ($horario as $a): ?>
+
                         <tr>
 
                           <td><?php echo $a['id_horario']?></td>
