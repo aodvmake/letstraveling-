@@ -1,5 +1,6 @@
 <?php 
  include("../controllers/sessionadmin.php");
+include("../controllers/datos.php");
 ?>
 
 <html>
@@ -22,10 +23,10 @@
   <link rel="icon" type="image/png" href="../lib/img/icono.png">
 
 <head>
-	<title>LET´S TRAVEL</title>
+  <title>LET´S TRAVEL</title>
 </head>
 <body>
-<div class="container">
+<div class="">
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">LET´S TRAVEL</a>
@@ -36,7 +37,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="admin.php">HOME<span class="sr-only">(current)</span>
+            <a class="nav-link" href="guia.php">HOME<span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
@@ -48,7 +49,6 @@
           <li class="nav-item">
             <a class="nav-link" href="horarios.php">HORARIOS</a>
           </li>
-
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
           <li class="nav-item dropdown">
@@ -67,20 +67,44 @@
     <!--/.Navbar -->
 
     <div class="content">
-      <div class="bannerText" id="slideshowText">
-        <div class="active">
-          <h2>Bienvenido<br>Admin<h2>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>        
-        </div>
-      </div>
-
-        <div class="bannerImg" id="slideshow">
-          <img src="../lib/img/img5.jpeg">
-        </div>    
+      <div class="card-body px-lg-5 pt-10">
+        <h2>INFORMACIÓN DE USUARIOS: GUIA</h2>
+                <div class="table-responsive" >
+                  <table class="table">
+                    <tr class="text-center">
+                      <th scope="col">CLAVE</th>
+                      <th scope="col">TELEFONO</th>
+                      <th scope="col">DOMICILIO</th>
+                      <th scope="col">COLONIA</th>
+                      <th scope="col">NÚMERO</th>
+                      <th scope="col">RFC</th>
+                      <th scope="col">CURP</th>
+                      <th scope="col">MUNICIPIO</th> 
+                      <th scope="col">ESTADO</th>
+                      <th scope="col">FECHA DE NACIMIENTO</th>                                           
+                    </tr>
+                       
+                     <?php foreach ($dato as $a): ?>
+                        <tr>
+                          <td><?php echo $a['id_usuario']?></td>
+                          <td><?php echo $a['telefono']?></td>
+                          <td><?php echo $a['domicilio']?></td>
+                          <td><?php echo $a['colonia']?></td>
+                          <td><?php echo $a['numero']?></td>
+                          <td><?php echo $a['RFC']?></td>
+                          <td><?php echo $a['CURP']?></td>
+                          <td><?php echo $a['municipio']?></td>
+                          <td><?php echo $a['estado']?></td>
+                          <td><?php echo $a['fechaN']?></td>
+                      <?php endforeach; ?>            
+                  </table>
+                </div>  
+      </div>    
+    </div>
   </div>
-
-
 </body>
+
+
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="../lib/js/popper.min.js"></script>

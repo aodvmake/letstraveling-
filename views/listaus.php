@@ -1,5 +1,6 @@
 <?php 
  include("../controllers/sessionadmin.php");
+ include("../controllers/usuario.php");
 ?>
 
 <html>
@@ -22,7 +23,7 @@
   <link rel="icon" type="image/png" href="../lib/img/icono.png">
 
 <head>
-	<title>LET´S TRAVEL</title>
+  <title>LET´S TRAVEL</title>
 </head>
 <body>
 <div class="container">
@@ -36,7 +37,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="admin.php">HOME<span class="sr-only">(current)</span>
+            <a class="nav-link" href="guia.php">HOME<span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
@@ -46,9 +47,8 @@
             <a class="nav-link" href="datos.php">DATOS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="horarios.php">HORARIOS</a>
+            <a class="nav-link" href="horarios.php">HORARIO</a>
           </li>
-
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
           <li class="nav-item dropdown">
@@ -67,20 +67,39 @@
     <!--/.Navbar -->
 
     <div class="content">
-      <div class="bannerText" id="slideshowText">
-        <div class="active">
-          <h2>Bienvenido<br>Admin<h2>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>        
-        </div>
-      </div>
+      <div class="card-body px-lg-1 pt-0">
+        <h2>USUARIOS</h2>
+        <form method="POST" action="../controllers/borrar.php">
+                <div class="table-responsive" >
+                  <table class="table">
+                    <tr class="text-center">
+                      <th scope="col">CLAVE</th>
+                      <th scope="col">ESTATUS</th>
+                      <th scope="col">EMAIL</th>
+                    </tr>
+                       <?php foreach ($usuario as $a): ?>
+                        <tr>
+                          <td><?php echo $a['id_usuario']?></td>
+                          <td><?php echo $a['estatus']?></td>
+                          <td><?php echo $a['email']?></td>
+                      <?php endforeach; ?>        
+                  </table>
+                </div>          
+        </form>
 
-        <div class="bannerImg" id="slideshow">
-          <img src="../lib/img/img5.jpeg">
-        </div>    
+      </div>    
+
+     <div class="bannerImg">
+      <img src="../lib/img/img5.jpeg">
+     </div>
+    </div>
+  
   </div>
-
-
 </body>
+
+
+
+
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="../lib/js/popper.min.js"></script>
@@ -91,4 +110,5 @@
   <script type="text/javascript">
     $('#materialIndeterminate2').prop('indeterminate', true);
   </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </html>

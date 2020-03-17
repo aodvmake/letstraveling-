@@ -88,7 +88,6 @@ include("../controllers/horario.php");
                     </tr>
                        <?php foreach ($horario as $a): ?>
                         <tr>
-
                           <td><?php echo $a['id_horario']?></td>
                           <td><?php echo $a['dia']?></td>
                           <td><?php echo $a['horarioi']?></td>

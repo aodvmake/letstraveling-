@@ -20,9 +20,7 @@ include("../controllers/horarioparaturista.php");
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="../lib/css/style.css">
   <link rel="icon" type="image/png" href="../lib/img/icono.png">
-<head>
-  <title>LET´S TRAVEL</title>
-</head>
+
 <body>
 <div class="container">
     <!--Navbar -->
@@ -92,6 +90,7 @@ include("../controllers/horarioparaturista.php");
               <?php endforeach; ?>        
            </table>
        </div>  
+
     </form>
   </div> 
 
