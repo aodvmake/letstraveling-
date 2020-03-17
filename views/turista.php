@@ -66,7 +66,7 @@ include("../controllers/horarioparaturista.php");
 
  
  Agregar horario
- <form  class="text-center" method="POST"> 
+ <form  class="text-center" method="POST" action="../controllers/agregarguia.php"> 
 
 
                 <div class="table-responsive">
@@ -100,15 +100,16 @@ include("../controllers/horarioparaturista.php");
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">GUIA</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
-        <span id="rateMe2"  class="empty-stars"></span>
+        
         <div class="modal-body">
-          Modal body..
+            <button type='submit' id='agregar' id='agregar' class='btn btn-primary'>Agregar</button>
           <div id="resultado"></div>
         </div>
+         <span id="rateMe2"  class="empty-stars"></span>
         <table><tr><td><input type='text' name='addcoment' id='addcoment'></td><td><button type='button' id='enviacomen' class='btn btn-primary'>Enviar</button></td></tr></table>
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -158,4 +159,29 @@ function square(id) {
         });
  }
 </script>
+
+
+<style type="text/css">
+  p.clasificacion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+p.clasificacion input {
+  position: absolute;
+  top: -100px;
+}
+
+p.clasificacion label {
+  float: right;
+  color: #333;
+}
+
+p.clasificacion label:hover,
+p.clasificacion label:hover ~ label,
+p.clasificacion input:checked ~ label {
+  color: #dd4;
+}clip-path: 
+</style>
 </html>
