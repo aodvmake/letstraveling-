@@ -1,9 +1,8 @@
 <?php 
 
-include("../controllers/sesionadm.php");
+include("../controllers/guiacontrol.php");
  ?>
-
-<html>
+ <html>
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -37,7 +36,7 @@ include("../controllers/sesionadm.php");
       <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="adminkiphp">HOME<span class="sr-only">(current)</span>
+            <a class="nav-link" href="adminki.php">HOME<span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
@@ -66,21 +65,46 @@ include("../controllers/sesionadm.php");
     </nav>
     <!--/.Navbar -->
 
-
     <div class="content">
-      <div class="bannerText" id="slideshowText">
-        <div class="active">
-          <h2>Bienvenido<br>Super Admin<h2>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>        
-        </div>
+      <div class="card-body px-lg-1 pt-0">
+          <h2>Guias</h2>
+            <form methodo="POST" action="../controllers/controlguiaeliminar.php">
+               <div class="table-responsive" >
+              <table class="table">
+                  <tr class="text-center">
+                    <th scope="col">ESTATUS</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">PUESTO</th>
+                    <th scope="col">CLAVE USER</th>
+                </tr>
+                <?php 
+                foreach ($variable as $ap ):
+                 ?>
+                <tr>
+                  <td> <?php echo $ap['estatus']?> </td>
+                  <td> <?php echo $ap['email']?> </td>
+                  <td> <?php echo $ap['id_puesto']?> </td>
+                  <td> <?php echo $ap['id_usuario']?> </td>
+                  <td> <input type="checkbox" value="<?php echo $ap['id_usuario']?>" id="check" name="check"> </imput> </td>
+                </tr>
+                <?php 
+                endforeach;
+                 ?>
+            </table>
+               </div>
+               <button type="submit" id="guardar" name="guardar" class="btn btn-danger btn-rounded">ELIMINAR</button>
+            </form>
       </div>
 
         <div class="bannerImg" id="slideshow">
           <img src="../lib/img/img5.jpeg">
         </div>    
   </div>
+
   </div>
+
 </body>
+
 
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->

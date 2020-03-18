@@ -87,9 +87,16 @@ include("../controllers/horario.php");
                       <th scope="col">DESCRIPCIÓN</th>
                     </tr>
                        <?php foreach ($horario as $a): ?>
+
                         <tr>
+<<<<<<< HEAD
                           <td><?php echo $a['id_horario']?></td>
                           <td><?php echo $a['dia']?></td>
+=======
+
+                          <td><input type="" id="id[]" name="id[]" value="<?php echo $a['id_horario']?>"></td>
+                          <td><input type="" id="dia[]" name="dia[]" value="<?php echo $a['dia']?>"></td>
+>>>>>>> 11e7d877453c6084e3591096d60175f81828eec7
                           <td><?php echo $a['horarioi']?></td>
                           <td><?php echo $a['horariof']?></td>
                           <td><textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="2" name="array[]"></textarea></td>
