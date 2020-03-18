@@ -38,12 +38,6 @@ include("../controllers/horario.php");
             <a class="nav-link" href="guia.php">HOME<span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">HORARIOS
@@ -63,7 +57,6 @@ include("../controllers/horario.php");
             <div class="dropdown-menu dropdown-menu-right dropdown-default"
               aria-labelledby="navbarDropdownMenuLink-333">
               <a class="dropdown-item" href="updateGuia.php">CONFIGURACIÓN</a>
-              <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#" onclick="location.href='../cerrarsession.php';">SALIR</a>
             </div>
           </li>
@@ -87,16 +80,11 @@ include("../controllers/horario.php");
                       <th scope="col">DESCRIPCIÓN</th>
                     </tr>
                        <?php foreach ($horario as $a): ?>
-
                         <tr>
-<<<<<<< HEAD
                           <td><?php echo $a['id_horario']?></td>
                           <td><?php echo $a['dia']?></td>
-=======
-
                           <td><input type="" id="id[]" name="id[]" value="<?php echo $a['id_horario']?>"></td>
                           <td><input type="" id="dia[]" name="dia[]" value="<?php echo $a['dia']?>"></td>
->>>>>>> 11e7d877453c6084e3591096d60175f81828eec7
                           <td><?php echo $a['horarioi']?></td>
                           <td><?php echo $a['horariof']?></td>
                           <td><textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="2" name="array[]"></textarea></td>

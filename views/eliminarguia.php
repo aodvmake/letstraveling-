@@ -76,6 +76,7 @@ include("../controllers/guiacontrol.php");
                     <th scope="col">EMAIL</th>
                     <th scope="col">PUESTO</th>
                     <th scope="col">CLAVE USER</th>
+                    <th scope="col"></th>
                 </tr>
                 <?php 
                 foreach ($variable as $ap ):
@@ -85,7 +86,7 @@ include("../controllers/guiacontrol.php");
                   <td> <?php echo $ap['email']?> </td>
                   <td> <?php echo $ap['id_puesto']?> </td>
                   <td> <?php echo $ap['id_usuario']?> </td>
-                  <td><button type="button" class="btn btn-danger btn-rounded" onclick="square('<?php echo $ap['id_usuario']?>')" id="empleado">Eliminar</button></td>
+                  <td><button type="button" class="btn peach-gradient" onclick="square('<?php echo $ap['id_usuario']?>')" id="empleado"><i class="fas fa-trash" aria-hidden="true"></button></td>
                 </tr>
                 <?php 
                 endforeach;

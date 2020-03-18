@@ -69,7 +69,7 @@ include("../controllers/horarioparaturista.php");
       <div class="card-body px-lg-1 pt-0">
         <h2>Agregar horario</h2>
 <form  class="text-center" method="POST" action="../controllers/agregarguia.php"> 
-    <div class="table-responsive">
+    <div class="table-responsive-sm">
       <?php 
         foreach ($horario as $a):?>
           <table class="table">
@@ -77,17 +77,16 @@ include("../controllers/horarioparaturista.php");
              <th scope="col">Empleado</th>
              <th scope="col">Dias</th>
              <th scope="col">Lugar</th>
+             <th></th>
             </tr>  
-             <tr>
-              <td><input class="form-control form-control-sm" type="" name="empler" id="empler" e value="<?php echo $a['id_usuario']?>"></td>
+              <td><input  style="border: 0; width: 15px; background: #fff;" disabled type="" name="empler" id="empler" e value="<?php echo $a['id_usuario']?>"></td>
               <td><?php echo $a['dias']?></td>
               <td><?php echo $a['lugares']?></td>
               <!-- Button to Open the Modal -->
-              <td><button type="button" class="btn btn-primary" onclick="square('<?php echo $a['id_usuario']?>')" id="empleado"><i class="fas fa-eye"></i></button></td> 
-             </tr>
+              <td>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPoll-1" onclick="square('<?php echo $a['id_usuario']?>')" id="empleado"><i class="fas fa-eye"></i></button>
+               </td> 
           </table>
-            <br>
-            <br>
             <?php
         endforeach;
       ?>
@@ -105,22 +104,20 @@ include("../controllers/horarioparaturista.php");
         <div class="modal-body">
         <div class="row">
           <div class="col-5">
-            <img src="../lib/img/img3.jpeg"
-              class="img-fluid" alt="">
+            <img src="../lib/img/img3.jpeg" class="d-block w-100" alt="">
           </div>
 
           <div class="col-7">
           <p><strong>DESEA AGREGAR TURISTA?</strong></p>     
-          <button type='submit' id='agregar' id='agregar'   class="btn btn-pink"><i class="fas fa-plane pr-2" aria-hidden="true"></i>AGTREGAR</button>
-          <div id="resultado"></div>
-                   <span id="rateMe2"  class="empty-stars"></span>
+          <button type='submit' id='agregar' id='agregar'   class="btn aqua-gradient"><i class="fas fa-user pr-2" aria-hidden="true"></i>AGTREGAR</button>
+          <div text-center id="resultado"></div>
+          <span id="rateMe2"  class="empty-stars"></span>
           <div class="md-form">
             <input class="form-control" type='text' name='addcoment' id='addcoment'>
             <label for="numberExample">COMENTARIO</label>
           </div>
-              <button type='button' id='enviacomen' class='btn btn-primary'><i class="far fa-envelope"></i></button>
+              <button type='button' id='enviacomen' class='btn aqua-gradient'><i class="far fa-envelope"></i></button>
           </div>
-
         </div>
         </div>        
       </div>
@@ -129,22 +126,10 @@ include("../controllers/horarioparaturista.php");
 </form>
 
       </div>    
-
      <div class="bannerImg">
       <img src="../lib/img/img3.jpeg">
      </div>
     </div> 
-
- 
-
-
-
-
-
-
-
-
-
 
 </body>
 <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
