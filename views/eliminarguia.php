@@ -85,14 +85,13 @@ include("../controllers/guiacontrol.php");
                   <td> <?php echo $ap['email']?> </td>
                   <td> <?php echo $ap['id_puesto']?> </td>
                   <td> <?php echo $ap['id_usuario']?> </td>
-                  <td> <input type="checkbox" value="<?php echo $ap['id_usuario']?>" id="check" name="check"> </imput> </td>
+                  <td><button type="button" class="btn btn-danger btn-rounded" onclick="square('<?php echo $ap['id_usuario']?>')" id="empleado">Eliminar</button></td>
                 </tr>
                 <?php 
                 endforeach;
                  ?>
             </table>
                </div>
-               <button type="submit" id="guardar" name="guardar" class="btn btn-danger btn-rounded">ELIMINAR</button>
             </form>
       </div>
 
@@ -113,4 +112,5 @@ include("../controllers/guiacontrol.php");
   <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="../lib/js/mdb.min.js"></script>
+  <script type="text/javascript" src="../js/eliminarguia.js"></script>
 </html>
