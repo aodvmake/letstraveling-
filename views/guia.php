@@ -38,12 +38,6 @@ include("../controllers/session.php");
             <a class="nav-link" href="guia.php">HOME<span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">HORARIOS
@@ -63,7 +57,6 @@ include("../controllers/session.php");
             <div class="dropdown-menu dropdown-menu-right dropdown-default"
               aria-labelledby="navbarDropdownMenuLink-333">
               <a class="dropdown-item" href="updateGuia.php">CONFIGURACIÓN</a>
-              <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#" onclick="location.href='../cerrarsession.php';">SALIR</a>
             </div>
           </li>
@@ -77,9 +70,7 @@ include("../controllers/session.php");
       <div class="bannerText" id="slideshowText">
         <div class="active">
           <h2>Bienvenido<br>Guia<h2>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          <a href="guiahorario.php">Crear</a>
-          <a href="guiacon.php">Ver  </a>         
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>        
         </div>
       </div>
 

@@ -159,6 +159,10 @@ transition: 0.5s ease-in-out;
 	width: 100%;
 }
 
+.content .sinborde{
+	border: 0;
+}
+
 .content .bannerImg{
 	position: relative;
 	width: 400px;
@@ -180,6 +184,9 @@ transition: 0.5s ease-in-out;
 .content .bannerImg img{
 	opacity: 1;
 }
+
+
+
 
 .icons{
 	display: flex;
@@ -249,6 +256,7 @@ header{
 	max-width: 100%;
 	padding-right: 0;
 }
+
 header ul{
 	display: none;
 	position: fixed;
@@ -277,9 +285,7 @@ header ul li a.active:before{
  width: 100%;
 }
 
-.sinborde {
-border: 0;
-}
+
 
 .menuIcon{
 	display: initial;
