@@ -7,7 +7,6 @@ include("../controllers/sesionadm.php");
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Admin</title>
 
   <!-- MDB icon -->
   <link rel="icon" href="../img/mdb-favicon.ico" type="image/x-icon">
@@ -41,7 +40,7 @@ include("../controllers/sesionadm.php");
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="eliminarguia.php">GUIA</a>
+            <a class="nav-link" href="eliminarguia.php">ELIMINAR GUIA</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href=""></a>

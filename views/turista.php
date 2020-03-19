@@ -92,6 +92,9 @@ include("../controllers/horarioparaturista.php");
       ?>
      </div>  
 
+
+
+
 <!-- The Modal -->
   <div class="modal fade" id="myModal">
     <div class="modal-dialog modal-lg">
