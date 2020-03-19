@@ -5,7 +5,7 @@ class modeloguardar{
        $clonn = new callTo();
        $rcnx = $clonn->callmeBaby();
      //Inserta en las tablas necesarias 
-      mysqli_query($rcnx,"INSERT INTO usuarios VALUES ('','$pass','','Activo','$correo')") or die("error no inserto usuarios");
+      mysqli_query($rcnx,"INSERT INTO usuarios VALUES ('',MD5('$pass'),'','Activo','$correo')") or die("error no inserto usuarios");
 
      //Consulta el correo que se acaba de regustrar y trae el id
       $cons=mysqli_query($rcnx,"SELECT* FROM `usuarios` WHERE email='$correo' ");

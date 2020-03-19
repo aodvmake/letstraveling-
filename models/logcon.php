@@ -6,7 +6,7 @@ class modeloguardar{
        $cclonn = new callTo();
        $rrcnx = $cclonn->callmeBaby();
      //Inserta en las tablas necesarias 
-      $conp=mysqli_query($rrcnx,"SELECT US.id_usuario,US.email,US.pass,puestos.nombre FROM usuarios AS US INNER JOIN puesto ON US.id_usuario=puesto.id_usuario INNER JOIN puestos on puesto.id_puesto=puestos.id_puesto WHERE US.email='$email' AND US.pass='$pass' ");
+      $conp=mysqli_query($rrcnx,"SELECT US.id_usuario,US.email,US.pass,puestos.nombre FROM usuarios AS US INNER JOIN puesto ON US.id_usuario=puesto.id_usuario INNER JOIN puestos on puesto.id_puesto=puestos.id_puesto WHERE US.email='$email' AND US.pass=MD5('$pass') ");
       $rows="";
 
       if ($row=mysqli_fetch_array($conp)){
