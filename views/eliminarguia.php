@@ -40,7 +40,7 @@ include("../controllers/guiacontrol.php");
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="eliminarguia.php">GUIA</a>
+            <a class="nav-link" href="eliminarguia.php">ELIMINAR GUIA</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href=""></a>
